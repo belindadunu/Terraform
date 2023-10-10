@@ -14,7 +14,7 @@ resource "aws_instance" "web_server2" {
   instance_type = "t2.micro"
   associate_public_ip_address = true
   subnet_id     = "" # input subnet ID here
-  security_groups = [""] # input security group id here
+  security_groups = ["sg-"] # input security group id here
 
   user_data = "${file("jenkins_installation.sh")}"
 
